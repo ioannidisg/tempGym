@@ -1,4 +1,5 @@
 // eslint.config.js
+import jsdoc from "eslint-plugin-jsdoc";
 export default [
     {
       files: ["**/*.js"],
