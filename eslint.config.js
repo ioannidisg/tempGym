@@ -3,8 +3,8 @@ export default [
     {
       files: ["**/*.js"],
       rules: {
-        "no-unused-vars": "warn",
-        // πρόσθεσε τους κανόνες που χρειάζεσαι
+        "jsdoc/require-description": "error",
+        "jsdoc/check-values": "error"
       },
     },
   ];
