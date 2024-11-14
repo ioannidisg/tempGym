@@ -1,14 +1,22 @@
-name: ci
+name: CI/CD
 
-on: push 
+on: push
 
 jobs:
   ci:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
-      - name: Run test
-        run: npm test
+        uses: actions/checkout@v2
+  
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+  
+      - name: Download deps
+        run: npm i
+        
+      - name: Run tests
+        run: npm run test
+
